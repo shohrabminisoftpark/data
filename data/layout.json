@@ -124,47 +124,6 @@
             }
           ]
         },
-         {
-                  "type": "LinearLayout",
-                  "orientation": "horizontal",
-                  "layout_width": "match_parent",
-                  "layout_marginTop": "8dp",
-                  "children": [
-                    {
-                      "type": "TextView",
-                      "layout_marginRight": "8dp",
-                      "layout_height": "32dp",
-                      "textSize": "12sp",
-                      "textColor": "#2cdb81",
-                      "text": "2",
-                      "layout_weight": "1",
-                      "gravity": "center"
-                    },
-                    {
-                      "type": "TextView",
-                      "layout_height": "32dp",
-                      "layout_marginRight": "8dp",
-                      "textSize": "12sp",
-                      "textColor": "#2cdb81",
-                      "text": "@{fn:add(2,2)}",
-                      "layout_weight": "2",
-                      "gravity": "center"
-                    },
-                    {
-                      "type": "TextView",
-                      "layout_height": "32dp",
-                      "layout_marginRight": "8dp",
-                      "textSize": "12sp",
-                      "textColor": "#2cdb81",
-                      "data": {
-                        "value": "@{fn:mul(2,2,2)}"
-                      },
-                      "text": "@{fn:number(@{value})}",
-                      "layout_weight": "3",
-                      "gravity": "center"
-                    }
-                  ]
-                },
         {
           "type": "include",
           "layout": "RelativeLayoutExample",
@@ -195,6 +154,15 @@
           "layout": "RecyclerViewExample",
           "padding": "16dp",
           "paddingBottom": "0dp"
+        },
+        {
+          "type": "CircleView",
+          "layout_width": "150dp",
+          "layout_height": "150dp",
+          "layout_marginTop": "16dp",
+          "layout_marginBottom": "16dp",
+          "layout_gravity": "center",
+          "color": "#aaef99"
         },
         {
           "type": "CircleView",
