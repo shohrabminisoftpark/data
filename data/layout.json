@@ -1,176 +1,138 @@
 {
-  "type": "ScrollView",
+  "type": "androidx.constraintlayout.widget.ConstraintLayout",
+  "android": "http://schemas.android.com/apk/res/android",
+  "app": "http://schemas.android.com/apk/res-auto",
   "layout_width": "match_parent",
-  "layout_height": "match_parent",
-  "scrollbars": "none",
+  "layout_height": "wrap_content",
   "children": [
     {
-      "type": "LinearLayout",
+      "type": "androidx.cardview.widget.CardView",
       "layout_width": "match_parent",
-      "layout_height": "match_parent",
-      "orientation": "vertical",
-      "background": "#efefef",
+      "layout_height": "wrap_content",
+      "layout_constraintTop_toTopOf": "parent",
       "children": [
         {
-          "type": "CardView",
+          "type": "androidx.constraintlayout.widget.ConstraintLayout",
           "layout_width": "match_parent",
-          "layout_height": "wrap_content",
-          "contentPadding": "16dp",
-          "cardBackgroundColor": "#88ff99bb",
-          "cardElevation": "2dp",
-          "cardCornerRadius": "16dp",
+          "layout_height": "match_parent",
           "children": [
             {
-              "type": "LinearLayout",
+              "type": "androidx.appcompat.widget.LinearLayoutCompat",
+              "id": "layout_finance",
               "layout_width": "match_parent",
               "layout_height": "wrap_content",
-              "orientation": "vertical",
-              "padding": "16dp",
-              "background": "#ffffff",
+              "layout_margin": "4dp",
+              "orientation": "horizontal",
+              "layout_constraintStart_toStartOf": "parent",
+              "layout_constraintTop_toTopOf": "parent",
               "children": [
                 {
-                  "type": "TextView",
-                  "singleLine": "@bool/true",
-                  "text": "TextView",
-                  "textColor": "#000000",
-                  "textSize": "12sp"
-                },
-                {
-                  "type": "TextView",
-                  "layout_width": "match_parent",
-                  "gravity": "right",
-                  "html": "<b>TextView</b> with <font color=#cc8322><i>HTML</i></font> content.",
-                  "textSize": "14sp"
-                },
-                {
-                  "type": "ImageView",
-                  "layout_width": "@dimen/sixty",
-                  "layout_height": "@dimen/sixty",
-                  "src": "@drawable/github_icon",
-                  "onClick": {
-                    "someKey": "someValue"
-                  },
-                  "layout_marginRight": "8dp"
-                },
-                {
-                  "type": "LinearLayout",
-                  "orientation": "horizontal",
-                  "layout_width": "match_parent",
-                  "layout_marginTop": "8dp",
+                  "type": "androidx.appcompat.widget.LinearLayoutCompat",
+                  "layout_width": "25dp",
+                  "layout_height": "wrap_content",
+                  "layout_gravity": "center",
+                  "background": "@drawable/table_border",
+                  "gravity": "center",
+                  "paddingStart": "2dp",
+                  "paddingEnd": "2dp",
+                  "visibility": "gone",
                   "children": [
                     {
-                      "type": "TextView",
-                      "layout_marginRight": "8dp",
-                      "layout_height": "32dp",
-                      "textSize": "12sp",
-                      "textColor": "#2cdb81",
-                      "text": "2",
-                      "layout_weight": "1",
-                      "gravity": "center"
-                    },
-                    {
-                      "type": "TextView",
-                      "layout_height": "32dp",
-                      "layout_marginRight": "8dp",
-                      "textSize": "12sp",
-                      "textColor": "#2cdb81",
-                      "text": "@{fn:add(2,2)}",
-                      "layout_weight": "2",
-                      "gravity": "center"
-                    },
-                    {
-                      "type": "TextView",
-                      "layout_height": "32dp",
-                      "layout_marginRight": "8dp",
-                      "textSize": "12sp",
-                      "textColor": "#2cdb81",
-                      "data": {
-                        "value": "@{fn:mul(2,2,2)}"
-                      },
-                      "text": "@{fn:number(@{value})}",
-                      "layout_weight": "3",
-                      "gravity": "center"
+                      "type": "androidx.appcompat.widget.AppCompatTextView",
+                      "id": "txt_serial_no",
+                      "layout_width": "wrap_content",
+                      "layout_height": "25dp",
+                      "layout_marginTop": "2dp",
+                      "layout_marginBottom": "2dp",
+                      "text": "S.L",
+                      "textAlignment": "center",
+                      "textColor": "@color/black"
                     }
                   ]
                 },
                 {
-                  "type": "Button",
-                  "layout_height": "?Theme_AppCompat:actionBarSize",
-                  "layout_width": "150dp",
+                  "type": "androidx.appcompat.widget.LinearLayoutCompat",
+                  "layout_width": "90dp",
+                  "layout_height": "wrap_content",
+                  "layout_gravity": "center",
+                  "layout_weight": "1",
+                  "background": "@drawable/table_border",
                   "gravity": "center",
-                  "layout_marginTop": "10dp",
-                  "text": "ADD TO CART",
-                  "textColor": "?Theme_AppCompat:actionMenuTextColor",
-                  "background": {
-                    "@": {
-                      "type": "ripple",
-                      "mask": "#aaaa99",
-                      "defaultBackground": "#aaaa99",
-                      "content": {
-                        "type": "shape",
-                        "shape": "rectangle",
-                        "children": [
-                          {
-                            "type": "solid",
-                            "color": "@{theme.color}"
-                          }
-                        ]
-                      },
-                      "color": "#ff0000"
+                  "children": [
+                    {
+                      "type": "androidx.appcompat.widget.AppCompatTextView",
+                      "id": "txt_name",
+                      "layout_width": "match_parent",
+                      "layout_height": "25dp",
+                      "layout_marginTop": "2dp",
+                      "layout_marginBottom": "2dp",
+                      "text": "name",
+                      "textAlignment": "center",
+                      "textColor": "@color/black"
                     }
-                  }
+                  ]
+                },
+                {
+                  "type": "androidx.appcompat.widget.LinearLayoutCompat",
+                  "layout_width": "90dp",
+                  "layout_height": "wrap_content",
+                  "layout_gravity": "center",
+                  "layout_weight": "1",
+                  "background": "@drawable/table_border",
+                  "gravity": "center",
+                  "children": [
+                    {
+                      "type": "androidx.appcompat.widget.AppCompatTextView",
+                      "id": "txt_date",
+                      "layout_width": "match_parent",
+                      "layout_height": "25dp",
+                      "layout_marginTop": "2dp",
+                      "layout_marginBottom": "2dp",
+                      "text": "Type",
+                      "textAlignment": "center",
+                      "textColor": "@color/black"
+                    }
+                  ]
+                },
+                {
+                  "type": "androidx.appcompat.widget.LinearLayoutCompat",
+                  "layout_width": "wrap_content",
+                  "layout_height": "wrap_content",
+                  "layout_gravity": "center",
+                  "layout_weight": "2",
+                  "background": "@drawable/table_border",
+                  "gravity": "center",
+                  "children": [
+                    {
+                      "type": "androidx.appcompat.widget.AppCompatButton",
+                      "layout_width": "60dp",
+                      "layout_height": "25dp",
+                      "layout_marginTop": "2dp",
+                      "layout_marginBottom": "2dp",
+                      "background": "@drawable/round_btn_dark_blue",
+                      "text": "View",
+                      "layout_marginEnd": "2dp",
+                      "textAlignment": "center",
+                      "textColor": "@color/white"
+                    },
+                    {
+                      "type": "androidx.appcompat.widget.AppCompatButton",
+                      "layout_width": "60dp",
+                      "layout_height": "25dp",
+                      "layout_marginTop": "2dp",
+                      "layout_marginBottom": "2dp",
+                      "background": "@drawable/round_btn_dark_blue",
+                      "text": "Delete",
+                      "layout_marginStart": "2dp",
+                      "backgroundTint": "@color/blood_red",
+                      "textAlignment": "center",
+                      "textColor": "@color/white"
+                    }
+                  ]
                 }
               ]
             }
           ]
-        },
-        {
-          "type": "include",
-          "layout": "RelativeLayoutExample",
-          "padding": "16dp",
-          "paddingBottom": "0dp"
-        },
-        {
-          "type": "include",
-          "layout": "SimpleDataBindingExample",
-          "padding": "16dp",
-          "paddingBottom": "0dp",
-          "data": {
-            "user": "@{0}",
-            "sec": "@{sec}"
-          }
-        },
-        {
-          "type": "include",
-          "layout": "DataDrivenExample",
-          "padding": "16dp",
-          "paddingBottom": "0dp",
-          "data": {
-            "user": "@{0}"
-          }
-        },
-        {
-          "type": "include",
-          "layout": "RecyclerViewExample",
-          "padding": "16dp",
-          "paddingBottom": "0dp"
-        },
-        {
-          "type": "CircleView",
-          "layout_width": "150dp",
-          "layout_height": "150dp",
-          "layout_marginTop": "16dp",
-          "layout_marginBottom": "16dp",
-          "layout_gravity": "center",
-          "color": "#aaef99"
-        },
-        {
-          "type": "CircleView",
-          "layout_width": "150dp",
-          "layout_height": "150dp",
-          "layout_marginTop": "16dp",
-          "layout_marginBottom": "16dp",
-          "color": "#aaef99"
         }
       ]
     }
