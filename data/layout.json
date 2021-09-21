@@ -103,7 +103,7 @@
                   "textColor": "?Theme_AppCompat:actionMenuTextColor",
                   "background": {
                     "@": {
-                      "type": "ripple",
+                      "type": "ripple", 
                       "mask": "#aaaa99",
                       "defaultBackground": "#aaaa99",
                       "content": {
